@@ -51,55 +51,166 @@ export default function WorkshopDealerPage() {
     <section className="container-pad py-10">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
-          <p className="text-sm font-black uppercase text-oil-red">Workshop / Dealer</p>
-          <h1 className="mt-2 text-4xl font-black text-oil-black">Register your interest with INFINITY AUTO PARTS.</h1>
-          <p className="mt-4 leading-7 text-neutral-600">
-            Share your workshop or dealer details and the SUMO Engine Oil products you are interested in. Your registration will be sent directly to our WhatsApp team.
+          <p className="text-sm font-black uppercase text-oil-red">
+            Workshop / Dealer
           </p>
+
+          <h1 className="mt-2 text-4xl font-black text-oil-black">
+            SUMO Engine Oil Dealer & Workshop Registration Malaysia
+          </h1>
+
+          <p className="mt-4 leading-7 text-neutral-600">
+            Register as a SUMO Engine Oil dealer, workshop partner, wholesaler
+            or automotive retailer in Malaysia. Infinity Auto Parts supplies
+            genuine SUMO engine oil products to workshops, spare parts shops and
+            automotive businesses nationwide.
+          </p>
+
           <div className="mt-6 rounded-sm bg-oil-black p-5 text-white">
             <Store className="h-8 w-8 text-oil-gold" />
-            <p className="mt-4 text-lg font-black">For Malaysian workshops, dealers, and car-service businesses.</p>
+            <p className="mt-4 text-lg font-black">
+              For Malaysian workshops, dealers, and car-service businesses.
+            </p>
+          </div>
+
+          <div className="mt-6 rounded-sm border border-neutral-200 bg-white p-5">
+            <h2 className="text-xl font-black text-oil-black">
+              Why Become a SUMO Engine Oil Dealer?
+            </h2>
+
+            <ul className="mt-3 space-y-2 text-neutral-700">
+              <li>✓ Genuine SUMO Engine Oil Products</li>
+              <li>✓ Competitive Dealer Pricing</li>
+              <li>✓ Workshop Supply Program</li>
+              <li>✓ Fast Delivery Across Malaysia</li>
+              <li>✓ Suitable for Workshops, Spare Parts Shops and Retailers</li>
+            </ul>
+          </div>
+
+          <div className="mt-6 rounded-sm border border-neutral-200 bg-white p-5">
+            <h2 className="text-xl font-black text-oil-black">
+              Who Can Apply?
+            </h2>
+
+            <ul className="mt-3 space-y-2 text-neutral-700">
+              <li>✓ Car workshops and service centres</li>
+              <li>✓ Spare parts shops</li>
+              <li>✓ Lubricant distributors</li>
+              <li>✓ Fleet maintenance companies</li>
+              <li>✓ Automotive retailers and resellers</li>
+            </ul>
+          </div>
+
+          <div className="mt-6 rounded-sm border border-neutral-200 bg-white p-5">
+            <h2 className="text-xl font-black text-oil-black">
+              Malaysia Dealer Coverage
+            </h2>
+
+            <p className="mt-3 leading-7 text-neutral-700">
+              We welcome dealer and workshop enquiries from Kuala Lumpur,
+              Selangor, Penang, Johor, Perak, Melaka, Negeri Sembilan, Pahang,
+              Sabah, Sarawak and other areas across Malaysia.
+            </p>
           </div>
         </div>
 
         <form className="grid gap-4 rounded-sm border border-neutral-200 bg-white p-5 shadow-sm">
           <label className="text-sm font-bold">
             Name
-            <input required value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3" />
+            <input
+              required
+              value={form.name}
+              onChange={(event) =>
+                setForm({ ...form, name: event.target.value })
+              }
+              className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3"
+            />
           </label>
+
           <label className="text-sm font-bold">
             Workshop name
-            <input required value={form.workshopName} onChange={(event) => setForm({ ...form, workshopName: event.target.value })} className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3" />
+            <input
+              required
+              value={form.workshopName}
+              onChange={(event) =>
+                setForm({ ...form, workshopName: event.target.value })
+              }
+              className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3"
+            />
           </label>
+
           <div className="grid gap-4 md:grid-cols-2">
             <label className="text-sm font-bold">
               Phone number
-              <input required value={form.phone} onChange={(event) => setForm({ ...form, phone: event.target.value })} className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3" />
+              <input
+                required
+                value={form.phone}
+                onChange={(event) =>
+                  setForm({ ...form, phone: event.target.value })
+                }
+                className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3"
+              />
             </label>
+
             <label className="text-sm font-bold">
               Location
-              <input required value={form.location} onChange={(event) => setForm({ ...form, location: event.target.value })} className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3" />
+              <input
+                required
+                value={form.location}
+                onChange={(event) =>
+                  setForm({ ...form, location: event.target.value })
+                }
+                className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3"
+              />
             </label>
           </div>
+
           <fieldset className="rounded-sm border border-neutral-200 p-4">
-            <legend className="px-2 text-sm font-bold">Interested products</legend>
+            <legend className="px-2 text-sm font-bold">
+              Interested products
+            </legend>
+
             <div className="mt-2 grid gap-2">
               {productOptions.map((product) => (
-                <label key={product} className="flex items-start gap-2 text-sm font-semibold text-neutral-700">
-                  <input type="checkbox" checked={form.interestedProducts.includes(product)} onChange={() => toggleProduct(product)} className="mt-1" />
+                <label
+                  key={product}
+                  className="flex items-start gap-2 text-sm font-semibold text-neutral-700"
+                >
+                  <input
+                    type="checkbox"
+                    checked={form.interestedProducts.includes(product)}
+                    onChange={() => toggleProduct(product)}
+                    className="mt-1"
+                  />
                   <span>{product}</span>
                 </label>
               ))}
             </div>
           </fieldset>
+
           <label className="text-sm font-bold">
             Monthly usage estimate
-            <input value={form.monthlyUsage} onChange={(event) => setForm({ ...form, monthlyUsage: event.target.value })} placeholder="Example: 20 cartons per month" className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3" />
+            <input
+              value={form.monthlyUsage}
+              onChange={(event) =>
+                setForm({ ...form, monthlyUsage: event.target.value })
+              }
+              placeholder="Example: 20 cartons per month"
+              className="mt-1 w-full rounded-sm border border-neutral-300 px-3 py-3"
+            />
           </label>
+
           <label className="text-sm font-bold">
             Notes
-            <textarea value={form.notes} onChange={(event) => setForm({ ...form, notes: event.target.value })} className="mt-1 min-h-28 w-full rounded-sm border border-neutral-300 px-3 py-3" />
+            <textarea
+              value={form.notes}
+              onChange={(event) =>
+                setForm({ ...form, notes: event.target.value })
+              }
+              className="mt-1 min-h-28 w-full rounded-sm border border-neutral-300 px-3 py-3"
+            />
           </label>
+
           <a
             href={buildWhatsAppUrl(buildMessage())}
             target="_blank"

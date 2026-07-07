@@ -8,16 +8,16 @@ import { ProductPlaceholder } from "@/components/ProductPlaceholder";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-sm border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-oil-red/40 hover:shadow-lg">
+    <article className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-oil-red/40 hover:shadow-xl">
       <Link href={`/products/${product.slug}`} className="relative block bg-gradient-to-b from-neutral-50 to-neutral-100">
         {product.image_url ? (
-          <div className="relative aspect-[4/3] w-full">
+          <div className="relative h-[300px] w-full bg-neutral-50">
             <Image
               src={product.image_url}
               alt={product.name}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-contain p-6 transition duration-300 hover:scale-105"
+              className="object-contain p-8 transition duration-300 hover:scale-105"
             />
           </div>
         ) : (
@@ -33,9 +33,26 @@ export function ProductCard({ product }: { product: Product }) {
         <Link href={`/products/${product.slug}`} className="text-lg font-black text-oil-black hover:text-oil-red">
           {product.name}
         </Link>
-        <p className="mt-2 line-clamp-2 text-sm leading-6 text-neutral-600">{product.short_description}</p>
-        <div className="mt-auto pt-5">
-          <p className="text-xl font-black text-oil-red">{formatProductPrice(product.price)}</p>
+        <p className="mt-2 line-clamp-2 text-sm leading-6 text-neutral-600">
+  {product.short_description}
+</p>
+
+<div className="mt-3 flex flex-wrap gap-2 text-xs">
+  <span className="rounded-full bg-green-100 px-2 py-1 text-green-700">
+    ✓ Made in Japan
+  </span>
+
+  <span className="rounded-full bg-blue-100 px-2 py-1 text-blue-700">
+    ✓ Ready Stock
+  </span>
+
+  <span className="rounded-full bg-red-100 px-2 py-1 text-red-700">
+    ✓ Official Distributor
+  </span>
+</div>
+
+<div className="mt-auto pt-5">
+          <p className="text-2xl font-extrabold text-red-600">{formatProductPrice(product.price)}</p>
           <div className="mt-3 grid gap-2">
             <AddToCartButton product={product} />
             <MarketplaceButtons vertical includeWhatsApp={false} />

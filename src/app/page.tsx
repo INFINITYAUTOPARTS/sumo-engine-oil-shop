@@ -45,46 +45,78 @@ export default async function HomePage() {
     url: siteUrl,
     description: metadata.description
   };
-
   return (
     <>
       <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
       <section className="bg-oil-black text-white">
-        <div className="container-pad grid min-h-[calc(100vh-4rem)] items-center gap-10 py-12 lg:grid-cols-[1fr_0.9fr]">
+        <div className="container-pad grid min-h-[700px] items-center gap-10 py-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="mb-4 inline-flex rounded-sm bg-oil-red px-3 py-1 text-xs font-black uppercase tracking-wide">
-              Malaysia automotive oil supplier
+              Genuine Japanese Engine Oil
             </p>
             <h1 className="max-w-4xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              SUMO Engine Oil Malaysia by INFINITY AUTO PARTS.
+              Genuine SUMO Engine Oil Malaysia
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-neutral-300 sm:text-lg">
-              Browse official SUMO engine oil products for car owners, workshops, and dealers. Add products to cart and send confirmed orders to us through WhatsApp.
+              Protect your engine with genuine Japanese engine oil.
+
+Suitable for Toyota, Honda, Nissan, Perodua, Proton and more.
+
+Fast delivery across Malaysia.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/products"
                 className="focus-ring inline-flex h-12 items-center justify-center gap-2 rounded-sm bg-oil-red px-5 text-sm font-black text-white hover:bg-red-700"
               >
-                Shop products <ArrowRight className="h-4 w-4" />
+                Shop Now <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/contact"
                 className="focus-ring inline-flex h-12 items-center justify-center rounded-sm border border-white/30 px-5 text-sm font-black text-white hover:bg-white hover:text-oil-black"
               >
-                Contact our team
+                WhatsApp Us
               </Link>
             </div>
           </div>
+
+<div className="mt-6 grid grid-cols-2 gap-2 text-sm text-neutral-200 sm:grid-cols-2">
+  <div>✅ 100% Genuine SUMO Engine Oil</div>
+  <div>✅ Official Malaysia Distributor</div>
+  <div>✅ Fast Delivery Nationwide</div>
+  <div>✅ For Car Owners & Workshops</div>
+</div><div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
+  <div>
+    <p className="text-3xl font-bold text-oil-red">5000+</p>
+    <p className="text-sm text-neutral-400">Happy Customers</p>
+  </div>
+
+  <div>
+    <p className="text-3xl font-bold text-oil-red">100+</p>
+    <p className="text-sm text-neutral-400">Workshop Partners</p>
+  </div>
+
+  <div>
+    <p className="text-3xl font-bold text-oil-red">15+</p>
+    <p className="text-sm text-neutral-400">Years Experience</p>
+  </div>
+
+  <div>
+    <p className="text-3xl font-bold text-oil-red">100%</p>
+    <p className="text-sm text-neutral-400">Genuine Products</p>
+  </div>
+</div>
+
           <div className="relative min-h-[300px] overflow-hidden rounded-sm border border-white/10 bg-neutral-900 shadow-glow sm:min-h-[420px]">
             <Image
-              src="/hero.jpg"
-              alt="SUMO Engine Oil Malaysia product banner"
-              fill
-              priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover"
-            />
+    src="/product-images/sumo-r1.png"
+  alt="SUMO R1 5W40 Fully Synthetic Engine Oil"
+  fill
+  priority
+  sizes="(min-width: 1024px) 45vw, 100vw"
+  className="object-contain p-4"
+
+/>
           </div>
         </div>
       </section>

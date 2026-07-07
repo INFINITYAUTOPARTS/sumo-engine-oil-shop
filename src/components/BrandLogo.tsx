@@ -17,7 +17,7 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
       {!compact ? (
         <span className="leading-tight">
           <span className="block text-sm font-black tracking-wide text-oil-black">Infinity Auto Parts</span>
-          <span className="block text-xs font-semibold uppercase text-neutral-500">Authorized SUMO Engine Oil Supplier</span>
+          <span className="block text-xs font-semibold uppercase text-neutral-500">Official SUMO Malaysia Distributor</span>
         </span>
       ) : null}
     </Link>

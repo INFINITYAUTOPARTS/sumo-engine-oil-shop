@@ -8,7 +8,7 @@ import { ProductPlaceholder } from "@/components/ProductPlaceholder";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-oil-red/40 hover:shadow-xl">
+    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-oil-red hover:shadow-2xl">
       <Link href={`/products/${product.slug}`} className="relative block bg-gradient-to-b from-neutral-50 to-neutral-100">
         {product.image_url ? (
           <div className="relative h-[300px] w-full bg-neutral-50">

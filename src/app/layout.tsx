@@ -25,12 +25,22 @@ export const metadata: Metadata = {
     "Engine Oil for Workshops Malaysia"
   ],
   openGraph: {
-    title: "SUMO Engine Oil Malaysia | Official Supplier for Car Owners & Workshops",
-    description: "Premium SUMO Engine Oil in Malaysia for car owners, workshops and dealers.",
-    url: getSiteUrl(),
-    siteName: "SUMO Engine Oil Malaysia",
-    type: "website"
-  },
+  title: "SUMO Engine Oil Malaysia | Official Supplier for Car Owners & Workshops",
+  description:
+    "Premium SUMO Engine Oil in Malaysia for car owners, workshops and dealers.",
+  url: getSiteUrl(),
+  siteName: "SUMO Engine Oil Malaysia",
+  type: "website",
+
+  images: [
+    {
+      url: "/brand/infinity-auto-parts-logo.png",
+      width: 1200,
+      height: 630,
+      alt: "Infinity Auto Parts Malaysia",
+    },
+  ],
+},
   icons: {
     icon: [
       { url: "/brand/infinity-auto-parts-logo.png", type: "image/png" }
@@ -38,16 +48,36 @@ export const metadata: Metadata = {
     apple: [{ url: "/brand/infinity-auto-parts-logo.png", type: "image/png" }]
   },
   twitter: {
-    card: "summary_large_image",
-    title: "SUMO Engine Oil Malaysia",
-    description: "Fully Synthetic, Semi Synthetic and Diesel Engine Oil for Malaysia."
-  }
+  card: "summary_large_image",
+  title: "SUMO Engine Oil Malaysia",
+  description: "Fully Synthetic, Semi Synthetic and Diesel Engine Oil for Malaysia.",
+  images: ["/brand/infinity-auto-parts-logo.png"],
+},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-MY">
       <body className={inter.className}>
+        <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Infinity Auto Parts",
+        url: getSiteUrl(),
+        logo: `${getSiteUrl()}/brand/infinity-auto-parts-logo.png`,
+        description:
+          "Official SUMO Malaysia distributor supplying genuine Japanese engine oil for car owners, workshops and dealers.",
+        areaServed: "Malaysia",
+        brand: {
+          "@type": "Brand",
+          name: "SUMO Engine Oil",
+        },
+      }),
+    }}
+  />
         <CartProvider>
           <Header />
           <main>{children}</main>

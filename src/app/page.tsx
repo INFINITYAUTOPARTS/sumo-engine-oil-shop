@@ -120,13 +120,159 @@ Fast delivery across Malaysia.
           </div>
         </div>
       </section>
+      <section className="bg-white py-12 border-y border-neutral-200">
+  <div className="container-pad">
 
+    <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+
+      <div>
+        <p className="text-4xl font-black text-oil-red">4.9★</p>
+        <p className="mt-2 font-semibold">Customer Rating</p>
+      </div>
+
+      <div>
+        <p className="text-4xl font-black text-oil-red">5000+</p>
+        <p className="mt-2 font-semibold">Happy Customers</p>
+      </div>
+
+      <div>
+        <p className="text-4xl font-black text-oil-red">100+</p>
+        <p className="mt-2 font-semibold">Workshop Partners</p>
+      </div>
+
+      <div>
+        <p className="text-4xl font-black text-oil-red">15+</p>
+        <p className="mt-2 font-semibold">Years Experience</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section className="bg-neutral-50 py-14">
+  <div className="container-pad">
+
+    <p className="text-center text-sm font-bold uppercase text-oil-red">
+      Suitable For
+    </p>
+
+    <h2 className="mt-2 text-center text-4xl font-black">
+      Popular Car Brands in Malaysia
+    </h2>
+
+    <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
+      Genuine SUMO engine oil suitable for most Japanese and Malaysian vehicles.
+    </p>
+
+    <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-5">
+
+      {[
+        "Toyota",
+        "Honda",
+        "Nissan",
+        "Perodua",
+        "Proton",
+        "Mazda",
+        "Mitsubishi",
+        "Subaru",
+        "Suzuki",
+        "Isuzu",
+      ].map((brand) => (
+
+        <div
+          key={brand}
+          className="rounded-xl border bg-white p-6 text-center font-semibold shadow-sm transition hover:shadow-md"
+        >
+          🚗 {brand}
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+<section className="bg-black py-20 text-white">
+  <div className="container-pad">
+
+    <p className="text-center text-sm font-bold uppercase text-oil-red">
+      Why Choose Us
+    </p>
+
+    <h2 className="mt-2 text-center text-4xl font-black">
+      Why Infinity Auto Parts?
+    </h2>
+
+    <p className="mx-auto mt-5 max-w-3xl text-center text-neutral-300">
+      Official SUMO Malaysia distributor supplying genuine Japanese engine oil
+      with reliable support for both workshops and retail customers.
+    </p>
+
+    <div className="mt-14 grid gap-8 md:grid-cols-4">
+
+      <div className="rounded-xl border border-neutral-700 p-6">
+        <div className="text-4xl">🇯🇵</div>
+        <h3 className="mt-4 text-xl font-bold">
+          Genuine Japan Product
+        </h3>
+        <p className="mt-3 text-neutral-400">
+          Original SUMO engine oil imported from Japan.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-neutral-700 p-6">
+        <div className="text-5xl">🚚</div>
+        <h3 className="mt-4 text-xl font-bold">
+          Fast Delivery
+        </h3>
+        <p className="mt-3 text-neutral-400">
+          Nationwide shipping across Malaysia.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-neutral-700 p-6">
+        <div className="text-5xl">🔧</div>
+        <h3 className="mt-4 text-xl font-bold">
+          Workshop Friendly
+        </h3>
+        <p className="mt-3 text-neutral-400">
+          Trusted by mechanics and automotive professionals.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-neutral-700 p-6">
+        <div className="text-5xl">💬</div>
+        <h3 className="mt-4 text-xl font-bold">
+          WhatsApp Support
+        </h3>
+        <p className="mt-3 text-neutral-400">
+          Fast quotation and customer support every day.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
       <section className="container-pad py-12">
         <div className="grid gap-4 md:grid-cols-3">
-          {[
-            { icon: BadgeCheck, title: "Quality SUMO oil range", text: "Engine oil options for common Malaysian service needs." },
-            { icon: Truck, title: "Dealer friendly ordering", text: "Clear catalog, product quantities, and delivery details in every order." },
-            { icon: Users, title: "Built for your customers", text: "Suitable for car owners, workshops, dealers, and fleet maintenance." }
+          
+  {[
+     {icon: BadgeCheck,
+    title: "100% Genuine Japan Oil",
+    text: "Original SUMO engine oil for Malaysian drivers and workshops.",
+  },
+  {
+    icon: Truck,
+    title: "Fast Delivery Nationwide",
+    text: "Clear catalog, stock availability, and delivery support across Malaysia.",
+  },
+  {
+    icon: Users,
+    title: "Trusted by Car Owners & Workshops",
+    text: "Suitable for retail buyers, mechanics, dealers, and fleet maintenance.",
+  },
+
           ].map((item) => (
             <div key={item.title} className="rounded-sm border border-neutral-200 p-5">
               <item.icon className="h-7 w-7 text-oil-red" />
@@ -155,6 +301,145 @@ Fast delivery across Malaysia.
           </div>
         </div>
       </section>
+      <section className="container-pad py-16">
+  <div className="text-center">
+    <p className="text-sm font-bold uppercase text-oil-red">
+      Customer Reviews
+    </p>
+
+    <h2 className="mt-2 text-4xl font-black">
+      Trusted by Car Owners Across Malaysia
+    </h2>
+
+    <p className="mt-4 text-neutral-600">
+      Thousands of customers trust Infinity Auto Parts for genuine SUMO
+      engine oil and reliable service.
+    </p>
+  </div>
+
+  <div className="mt-12 grid gap-6 md:grid-cols-3">
+
+    <div className="rounded-xl border p-6 shadow-sm">
+      <div className="text-yellow-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-4 text-neutral-700">
+        Original SUMO engine oil. Fast delivery and excellent customer
+        service. Highly recommended!
+      </p>
+
+      <p className="mt-6 font-bold">
+        Lim Wei Hong
+      </p>
+
+      <p className="text-sm text-neutral-500">
+        Kuala Lumpur
+      </p>
+    </div>
+
+    <div className="rounded-xl border p-6 shadow-sm">
+      <div className="text-yellow-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-4 text-neutral-700">
+        Good packaging, genuine product and responsive seller. Will buy
+        again.
+      </p>
+
+      <p className="mt-6 font-bold">
+        Ah Chong Auto Service
+      </p>
+
+      <p className="text-sm text-neutral-500">
+        Selangor
+      </p>
+    </div>
+
+    <div className="rounded-xl border p-6 shadow-sm">
+      <div className="text-yellow-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-4 text-neutral-700">
+        Excellent quality engine oil. My workshop has been using SUMO for
+        years.
+      </p>
+
+      <p className="mt-6 font-bold">
+        Kelvin Tan
+      </p>
+
+      <p className="text-sm text-neutral-500">
+        Penang
+      </p>
+    </div>
+
+  </div>
+</section>
+<section className="bg-neutral-50 py-16">
+  <div className="container-pad">
+    <div className="text-center">
+      <p className="text-sm font-bold uppercase text-oil-red">
+        FAQ
+      </p>
+
+      <h2 className="mt-2 text-4xl font-black">
+        Frequently Asked Questions
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-3xl text-neutral-600">
+        Common questions about SUMO Engine Oil Malaysia, delivery, wholesale
+        purchase and product selection.
+      </p>
+    </div>
+
+    <div className="mx-auto mt-12 max-w-4xl space-y-4">
+      {[
+        {
+          question: "Is SUMO Engine Oil suitable for Perodua and Proton?",
+          answer:
+            "Yes. SUMO Engine Oil is suitable for many Malaysian vehicles including Perodua, Proton, Toyota, Honda, Nissan and more. Always follow the viscosity recommended in your owner's manual.",
+        },
+        {
+          question: "Is SUMO Engine Oil original?",
+          answer:
+            "Yes. Infinity Auto Parts is an official SUMO Malaysia supplier providing genuine Japanese engine oil.",
+        },
+        {
+          question: "Do you ship throughout Malaysia?",
+          answer:
+            "Yes. We deliver across Peninsular Malaysia and East Malaysia depending on courier coverage.",
+        },
+        {
+          question: "Can workshops buy in bulk?",
+          answer:
+            "Yes. Workshops and dealers are welcome. Contact us for wholesale pricing and dealer support.",
+        },
+        {
+          question: "Which engine oil should I choose?",
+          answer:
+            "The correct oil depends on your vehicle model and manufacturer recommendation. Contact us and we will help you choose.",
+        },
+        {
+          question: "Where can I buy SUMO Engine Oil?",
+          answer:
+            "You can order directly through our website, WhatsApp, Shopee or TikTok Shop.",
+        },
+      ].map((faq) => (
+        <div key={faq.question} className="rounded-xl border bg-white p-6 shadow-sm">
+          <h3 className="text-lg font-bold">
+            {faq.question}
+          </h3>
+          <p className="mt-3 text-neutral-600">
+            {faq.answer}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     </>
   );
 }

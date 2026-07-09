@@ -24,7 +24,7 @@ export function ProductCard({ product }: { product: Product }) {
           <ProductPlaceholder name={product.name} viscosity={product.viscosity} volume={product.volume} />
         )}
       </Link>
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex flex-wrap gap-2 text-xs font-bold uppercase">
           <span className="bg-oil-black px-2 py-1 text-white">{product.viscosity}</span>
           <span className="bg-oil-gold px-2 py-1 text-oil-black">{product.volume}</span>

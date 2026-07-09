@@ -9,6 +9,7 @@ import { MarketplaceButtons } from "@/components/MarketplaceButtons";
 
 const navItems = [
   { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
   { href: "/workshop-dealer", label: "Workshop / Dealer" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }

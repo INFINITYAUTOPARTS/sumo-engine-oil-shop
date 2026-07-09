@@ -72,7 +72,7 @@ export default function ProtonSagaGuide() {
           </Link>
 
           <a
-            href="https://wa.me/60123456789"
+            href="https://wa.me/60169133412"
             className="rounded-lg border px-6 py-3 font-bold hover:bg-neutral-50"
           >
             WhatsApp Us

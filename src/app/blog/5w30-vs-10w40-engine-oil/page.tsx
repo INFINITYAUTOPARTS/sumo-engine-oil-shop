@@ -111,7 +111,7 @@ export default function EngineOilGuide() {
           </Link>
 
           <a
-            href="https://wa.me/60123456789"
+            href="https://wa.me/60169133412"
             className="rounded-lg border px-6 py-3 font-bold hover:bg-neutral-50"
           >
             WhatsApp Us
@@ -160,7 +160,7 @@ export default function EngineOilGuide() {
 
         <div className="mt-8 flex flex-wrap gap-4">
           <a
-            href="https://wa.me/60123456789"
+            href="https://wa.me/60169133412"
             className="rounded-lg bg-green-600 px-6 py-3 font-bold text-white hover:bg-green-700"
           >
             Ask on WhatsApp

@@ -19,7 +19,54 @@ type VehicleModel = {
 type VehicleOption = {
   models: VehicleModel[];
 };
+const productDetails: Record<
+  string,
+  {
+    oilType: string;
+    suitableFor: string[];
+    changeInterval: string;
+  }
+> = {
+  "/products/sumo-5w30-r4-semi-synthetic-engine-oil": {
+    oilType: "Semi Synthetic",
+    suitableFor: [
+      "Daily city driving",
+      "Normal highway driving",
+      "Regular family vehicles",
+    ],
+    changeInterval: "Follow the vehicle manufacturer’s service schedule",
+  },
 
+  "/products/sumo-10w40-r3-semi-synthetic-engine-oil": {
+    oilType: "Semi Synthetic",
+    suitableFor: [
+      "Daily commuting",
+      "Older or higher-mileage vehicles",
+      "City and highway driving",
+    ],
+    changeInterval: "Follow the vehicle manufacturer’s service schedule",
+  },
+
+  "/products/sumo-5w40-r1-fully-synthetic-engine-oil": {
+    oilType: "Fully Synthetic",
+    suitableFor: [
+      "Higher-performance driving",
+      "Turbocharged engines where compatible",
+      "Drivers seeking stronger high-temperature protection",
+    ],
+    changeInterval: "Follow the vehicle manufacturer’s service schedule",
+  },
+
+  "/products/sumo-4x4-15w50-diesel-engine-oil": {
+    oilType: "Diesel Engine Oil",
+    suitableFor: [
+      "Compatible diesel engines",
+      "4X4 and pickup applications",
+      "Heavy-duty driving conditions",
+    ],
+    changeInterval: "Follow the diesel engine manufacturer’s service schedule",
+  },
+};
 const vehicleData: Record<string, VehicleOption> = {
   Toyota: {
     models: [
@@ -259,7 +306,9 @@ export function EngineOilFinder() {
   );
 
   const selectedModel = models.find((item) => item.name === model);
-
+const selectedProductDetails = selectedModel
+  ? productDetails[selectedModel.recommendation.href]
+  : undefined;
   function handleBrandChange(value: string) {
     setBrand(value);
     setModel("");
@@ -359,37 +408,50 @@ export function EngineOilFinder() {
               <p className="mt-1 font-semibold text-neutral-700">
                 Recommended viscosity:{" "}
                 {selectedModel.recommendation.viscosity}
-              </p>
+              </p>{selectedProductDetails ? (
+  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+    <div className="rounded-lg border border-green-200 bg-white p-4">
+      <p className="text-xs font-bold uppercase tracking-wide text-neutral-500">
+        Oil Type
+      </p>
+      <p className="mt-1 font-bold text-neutral-900">
+        {selectedProductDetails.oilType}
+      </p>
+    </div>
+
+    <div className="rounded-lg border border-green-200 bg-white p-4">
+      <p className="text-xs font-bold uppercase tracking-wide text-neutral-500">
+        Service Guidance
+      </p>
+      <p className="mt-1 font-bold text-neutral-900">
+        {selectedProductDetails.changeInterval}
+      </p>
+    </div>
+
+    <div className="rounded-lg border border-green-200 bg-white p-4 sm:col-span-2">
+      <p className="text-xs font-bold uppercase tracking-wide text-neutral-500">
+        Commonly Suitable For
+      </p>
+
+      <ul className="mt-2 grid gap-2 sm:grid-cols-3">
+        {selectedProductDetails.suitableFor.map((item) => (
+          <li
+            key={item}
+            className="flex items-start gap-2 text-sm font-medium text-neutral-700"
+          >
+            <span className="text-green-600">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+) : null}
 
               <p className="mt-3 text-neutral-600">
                 {selectedModel.recommendation.note}
               </p>
-{model === "Vios" && (
-  <Link
-    href="/blog/best-engine-oil-toyota-vios-malaysia"
-    className="mt-4 inline-block font-bold text-oil-red hover:underline"
-  >
-    📖 Read Complete Toyota Vios Engine Oil Guide →
-  </Link>
-)}
 
-{model === "Myvi" && (
-  <Link
-    href="/blog/best-engine-oil-perodua-myvi"
-    className="mt-4 inline-block font-bold text-oil-red hover:underline"
-  >
-    📖 Read Complete Perodua Myvi Engine Oil Guide →
-  </Link>
-)}
-
-{model === "Saga" && (
-  <Link
-    href="/blog/best-engine-oil-proton-saga"
-    className="mt-4 inline-block font-bold text-oil-red hover:underline"
-  >
-    📖 Read Complete Proton Saga Engine Oil Guide →
-  </Link>
-)}
               <p className="mt-3 text-sm text-neutral-500">
                 Recommendation is a general guide. Always confirm the correct
                 viscosity and specification in your vehicle owner&apos;s manual.
@@ -411,6 +473,32 @@ export function EngineOilFinder() {
                 >
                   Ask on WhatsApp
                 </a>
+                {model === "Vios" && (
+  <Link
+    href="/blog/best-engine-oil-toyota-vios-malaysia"
+    className="rounded border border-neutral-300 bg-white px-5 py-3 font-bold text-neutral-800 hover:bg-neutral-100"
+  >
+    Read Full Guide
+  </Link>
+)}
+
+{model === "Myvi" && (
+  <Link
+    href="/blog/best-engine-oil-perodua-myvi"
+    className="rounded border border-neutral-300 bg-white px-5 py-3 font-bold text-neutral-800 hover:bg-neutral-100"
+  >
+    Read Full Guide
+  </Link>
+)}
+
+{model === "Saga" && (
+  <Link
+    href="/blog/best-engine-oil-proton-saga"
+    className="rounded border border-neutral-300 bg-white px-5 py-3 font-bold text-neutral-800 hover:bg-neutral-100"
+  >
+    Read Full Guide
+  </Link>
+)}
               </div>
             </div>
           ) : null}

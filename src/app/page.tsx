@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ProductCard } from "@/components/ProductCard";
 import { getFeaturedProducts } from "@/lib/products";
 import { getSiteUrl } from "@/lib/utils";
+import { EngineOilFinder } from "@/components/EngineOilFinder";
 
 export const metadata: Metadata = {
   title: "SUMO Engine Oil Malaysia | Official Supplier for Car Owners & Workshops",
@@ -120,6 +121,7 @@ Fast delivery across Malaysia.
           </div>
         </div>
       </section>
+      <EngineOilFinder />
       <section className="bg-white py-12 border-y border-neutral-200">
   <div className="container-pad">
 

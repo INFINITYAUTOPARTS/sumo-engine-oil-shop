@@ -20,6 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   "/blog/best-engine-oil-perodua-myvi",
   "/blog/best-engine-oil-proton-saga",
   "/blog/best-engine-oil-toyota-vios-malaysia",
+  "/blog/best-engine-oil-toyota-hilux-malaysia",
 ];
   return [
     ...staticRoutes.map((route) => ({

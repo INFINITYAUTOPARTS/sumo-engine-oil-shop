@@ -37,7 +37,12 @@ export default function BlogPage() {
         "Recommended engine oil change intervals for Malaysian driving conditions.",
       slug: "/blog/how-often-should-you-change-engine-oil",
     },
-  ];
+  {
+  title: "Best Engine Oil for Toyota Hilux Malaysia",
+  description:
+    "Recommended engine oil for Toyota Hilux diesel models in Malaysia, including viscosity and maintenance guidance.",
+  slug: "/blog/best-engine-oil-toyota-hilux-malaysia",
+},];
 
   return (
     <main className="container-pad py-20">

@@ -499,6 +499,14 @@ const selectedProductDetails = selectedModel
     Read Full Guide
   </Link>
 )}
+{model === "Hilux" && (
+  <Link
+    href="/blog/best-engine-oil-toyota-hilux-malaysia"
+    className="rounded border border-neutral-300 bg-white px-5 py-3 font-bold text-neutral-800 hover:bg-neutral-100"
+  >
+    Read Full Guide
+  </Link>
+)}
               </div>
             </div>
           ) : null}

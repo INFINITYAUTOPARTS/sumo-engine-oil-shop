@@ -23,8 +23,7 @@ export default function ToyotaHiluxBlog() {
 
         <p>
           For most Toyota Hilux diesel models in Malaysia, a high quality
-          15W50 diesel engine oil provides excellent protection under Malaysia&apos;s
-          hot weather and heavy driving conditions.
+          15W50 diesel engine oil provides excellent protection under Malaysia&apos;s hot weather and heavy driving conditions.
         </p>
 
         <ul>
@@ -48,13 +47,13 @@ export default function ToyotaHiluxBlog() {
         <p>
           Most Toyota Hilux owners should replace engine oil every
           <strong> 8,000–10,000 km</strong> or according to the vehicle
-          manufacturer&apos;s maintenance schedule.
+          anufacturer&apos;s maintenance schedule
         </p>
 
         <h2>Conclusion</h2>
 
         <p>
-          If you&apos;s re searching for the best engine oil for Toyota Hilux in
+          If you&apos;re searching for the best engine oil for Toyota Hilux in
           Malaysia, choosing a premium diesel engine oil like
           <strong> SUMO 4X4 15W50 Diesel Engine Oil</strong> helps keep your
           engine protected for daily driving, towing and demanding conditions.

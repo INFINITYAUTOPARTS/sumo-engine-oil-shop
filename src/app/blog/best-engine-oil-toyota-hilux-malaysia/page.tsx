@@ -47,7 +47,7 @@ export default function ToyotaHiluxBlog() {
         <p>
           Most Toyota Hilux owners should replace engine oil every
           <strong> 8,000–10,000 km</strong> or according to the vehicle
-          anufacturer&apos;s maintenance schedule
+          manufacturer&apos;s maintenance schedule
         </p>
 
         <h2>Conclusion</h2>

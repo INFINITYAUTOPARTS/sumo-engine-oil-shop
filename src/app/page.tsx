@@ -69,7 +69,7 @@ Fast delivery across Malaysia.
                 href="/products"
                 className="focus-ring inline-flex h-12 items-center justify-center gap-2 rounded-sm bg-oil-red px-5 text-sm font-black text-white hover:bg-red-700"
               >
-                Shop Now <ArrowRight className="h-4 w-4" />
+                View Products <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/contact"

@@ -42,7 +42,14 @@ export default function BlogPage() {
   description:
     "Recommended engine oil for Toyota Hilux diesel models in Malaysia, including viscosity and maintenance guidance.",
   slug: "/blog/best-engine-oil-toyota-hilux-malaysia",
-},];
+},
+{
+  title: "Best Engine Oil for Honda City Malaysia",
+  description:
+    "Recommended engine oil for Honda City in Malaysia including viscosity, maintenance interval and product recommendation.",
+  slug: "/blog/best-engine-oil-honda-city-malaysia",
+},
+];
 
   return (
     <main className="container-pad py-20">

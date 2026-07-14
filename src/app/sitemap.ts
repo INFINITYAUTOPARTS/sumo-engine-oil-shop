@@ -22,6 +22,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   "/blog/best-engine-oil-toyota-vios-malaysia",
   "/blog/best-engine-oil-toyota-hilux-malaysia",
   "/blog/best-engine-oil-honda-city-malaysia",
+  "/blog/best-engine-oil-perodua-bezza-malaysia",
+  "/blog/best-engine-oil-perodua-axia-malaysia",
+  "/blog/best-engine-oil-perodua-alza-malaysia",
+  "/blog/best-engine-oil-toyota-corolla-malaysia",
+  "/blog/best-engine-oil-honda-civic-malaysia",
+  "/blog/best-engine-oil-proton-persona-malaysia",
+  "/blog/best-engine-oil-proton-x50-malaysia",
+  "/blog/best-engine-oil-proton-x70-malaysia",
+  "/blog/best-engine-oil-toyota-corolla-cross-malaysia",
+  "/blog/best-engine-oil-toyota-veloz-malaysia",
 ];
   return [
     ...staticRoutes.map((route) => ({

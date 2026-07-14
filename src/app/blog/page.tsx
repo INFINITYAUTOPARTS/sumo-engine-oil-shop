@@ -49,6 +49,66 @@ export default function BlogPage() {
     "Recommended engine oil for Honda City in Malaysia including viscosity, maintenance interval and product recommendation.",
   slug: "/blog/best-engine-oil-honda-city-malaysia",
 },
+{
+  title: "Best Engine Oil for Perodua Bezza Malaysia",
+  description:
+    "Recommended engine oil for Perodua Bezza in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-perodua-bezza-malaysia",
+},
+{
+  title: "Best Engine Oil for Perodua Axia Malaysia",
+  description:
+    "Recommended engine oil for Perodua Axia in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-perodua-axia-malaysia",
+},
+{
+  title: "Best Engine Oil for Perodua Alza Malaysia",
+  description:
+    "Recommended engine oil for Perodua Alza in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-perodua-alza-malaysia",
+},
+{
+  title: "Best Engine Oil for Toyota Corolla Malaysia",
+  description:
+    "Recommended engine oil for Toyota Corolla in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-toyota-corolla-malaysia",
+},
+{
+  title: "Best Engine Oil for Honda Civic Malaysia",
+  description:
+    "Recommended engine oil for Honda Civic in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-honda-civic-malaysia",
+},
+{
+  title: "Best Engine Oil for Proton Persona Malaysia",
+  description:
+    "Recommended engine oil for Proton Persona in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-proton-persona-malaysia",
+},
+{
+  title: "Best Engine Oil for Proton X50 Malaysia",
+  description:
+    "Recommended engine oil for Proton X50 in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-proton-x50-malaysia",
+},
+{
+  title: "Best Engine Oil for Proton X70 Malaysia",
+  description:
+    "Recommended engine oil for Proton X70 in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-proton-x70-malaysia",
+},
+{
+  title: "Best Engine Oil for Toyota Corolla Cross Malaysia",
+  description:
+    "Recommended engine oil for Toyota Corolla Cross in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-toyota-corolla-cross-malaysia",
+},
+{
+  title: "Best Engine Oil for Toyota Veloz Malaysia",
+  description:
+    "Recommended engine oil for Toyota Veloz in Malaysia, including viscosity and suitable SUMO engine oil.",
+  slug: "/blog/best-engine-oil-toyota-veloz-malaysia",
+},
 ];
 
   return (

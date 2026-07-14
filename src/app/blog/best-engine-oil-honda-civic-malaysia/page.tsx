@@ -1,4 +1,12 @@
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
+
+export const metadata = createEngineOilMetadata({
+  car: "Honda Civic",
+  slug: "best-engine-oil-honda-civic-malaysia",
+  description:
+    "Learn the recommended engine oil viscosity for Honda Civic in Malaysia and discover the suitable SUMO engine oil.",
+});
 
 export default function Page() {
   return (

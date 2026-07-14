@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JsonLd } from "./JsonLd";
 
 type Props = {
   car: string;
@@ -6,6 +7,8 @@ type Props = {
   product: string;
   productUrl: string;
   intro?: string;
+  updatedDate?: string;
+  readingTime?: string;
 };
 
 export default function EngineOilGuideTemplate({
@@ -14,14 +17,64 @@ export default function EngineOilGuideTemplate({
   product,
   productUrl,
   intro,
+  updatedDate = "July 2026",
+  readingTime = "3 min read",
 }: Props) {
   return (
+    <><JsonLd
+  data={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `Best Engine Oil for ${car} Malaysia`,
+    description: intro,
+    author: {
+      "@type": "Organization",
+      name: "Infinity Auto Parts",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Infinity Auto Parts",
+    },
+    datePublished: "2026-07-14",
+    dateModified: "2026-07-14",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+    },
+  }}
+/>
+
     <main className="container-pad mx-auto max-w-4xl py-16">
       <article>
+        <nav
+  aria-label="Breadcrumb"
+  className="mb-6 flex flex-wrap items-center gap-2 text-sm text-neutral-500"
+>
+  <Link href="/" className="hover:text-oil-red hover:underline">
+    Home
+  </Link>
+
+  <span aria-hidden="true">›</span>
+
+  <Link href="/blog" className="hover:text-oil-red hover:underline">
+    Blog
+  </Link>
+
+  <span aria-hidden="true">›</span>
+
+  <span className="text-neutral-700">
+    Best Engine Oil for {car} Malaysia
+  </span>
+</nav>
         <h1 className="text-4xl font-black">
           Best Engine Oil for {car} Malaysia
         </h1>
-
+<div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-neutral-500">
+  <span>Updated {updatedDate}</span>
+  <span aria-hidden="true">•</span>
+  <span>{readingTime}</span>
+  <span aria-hidden="true">•</span>
+  <span>By Infinity Auto Parts</span>
+</div>
         <p className="mt-6 text-lg text-neutral-700">
           {intro ?? (
   <>
@@ -104,7 +157,62 @@ export default function EngineOilGuideTemplate({
   </div>
 </section>
         </div>
+        <section className="mt-16 border-t pt-10">
+  <h2 className="text-3xl font-bold">
+    Related Articles
+  </h2>
+
+  <p className="mt-2 text-neutral-600">
+    Learn more about engine oil selection, maintenance and other popular
+    vehicle guides.
+  </p>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+
+    <Link
+      href="/blog/how-often-should-you-change-engine-oil"
+      className="rounded-xl border p-5 hover:border-red-500 hover:shadow-md transition"
+    >
+      <h3 className="font-bold text-lg">
+        How Often Should You Change Engine Oil?
+      </h3>
+
+      <p className="mt-2 text-sm text-neutral-600">
+        Learn the recommended oil change interval for Malaysian driving
+        conditions.
+      </p>
+    </Link>
+
+    <Link
+      href="/blog/fully-synthetic-vs-semi-synthetic"
+      className="rounded-xl border p-5 hover:border-red-500 hover:shadow-md transition"
+    >
+      <h3 className="font-bold text-lg">
+        Fully Synthetic vs Semi Synthetic
+      </h3>
+
+      <p className="mt-2 text-sm text-neutral-600">
+        Understand the difference before choosing your next engine oil.
+      </p>
+    </Link>
+
+    <Link
+      href="/blog/5w30-vs-10w40-engine-oil"
+      className="rounded-xl border p-5 hover:border-red-500 hover:shadow-md transition"
+    >
+      <h3 className="font-bold text-lg">
+        5W30 vs 10W40 Engine Oil
+      </h3>
+
+      <p className="mt-2 text-sm text-neutral-600">
+        Compare viscosity grades and find the right oil for your vehicle.
+      </p>
+    </Link>
+
+  </div>
+</section>
       </article>
     </main>
-  );
+</>
+);
 }

@@ -1,4 +1,12 @@
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
+
+export const metadata = createEngineOilMetadata({
+  car: "Honda City",
+  slug: "best-engine-oil-honda-city-malaysia",
+  description:
+    "Learn the recommended engine oil viscosity for Honda City in Malaysia and discover the suitable SUMO engine oil.",
+});
 
 export default function Page() {
   return (

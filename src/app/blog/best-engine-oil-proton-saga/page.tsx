@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { createEngineOilMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Best Engine Oil for Proton Saga Malaysia (2026 Guide)",
+export const metadata = createEngineOilMetadata({
+  car: "Proton Saga",
+  slug: "best-engine-oil-proton-saga",
   description:
-    "Looking for the best engine oil for Proton Saga in Malaysia? Learn suitable viscosity options and why SUMO Engine Oil is a reliable choice.",
-};
+    "Looking for the best engine oil for Proton Saga in Malaysia? Learn suitable viscosity options and discover the recommended SUMO engine oil.",
+});
 
 export default function ProtonSagaGuide() {
   return (

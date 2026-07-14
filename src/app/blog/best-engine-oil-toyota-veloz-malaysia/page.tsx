@@ -1,5 +1,12 @@
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
 
+export const metadata = createEngineOilMetadata({
+  car: "Toyota Veloz",
+  slug: "best-engine-oil-toyota-veloz-malaysia",
+  description:
+    "Learn the recommended engine oil viscosity for Toyota Veloz in Malaysia and discover the suitable SUMO engine oil.",
+});
 export default function Page() {
   return (
     <EngineOilGuideTemplate

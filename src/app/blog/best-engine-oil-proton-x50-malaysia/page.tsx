@@ -1,4 +1,12 @@
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
+
+export const metadata = createEngineOilMetadata({
+  car: "Proton X50",
+  slug: "best-engine-oil-proton-x50-malaysia",
+  description:
+    "Learn the recommended engine oil viscosity for Proton X50 in Malaysia and discover the suitable SUMO engine oil.",
+});
 
 export default function Page() {
   return (

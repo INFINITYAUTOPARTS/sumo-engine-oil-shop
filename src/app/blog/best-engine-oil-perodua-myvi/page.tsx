@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { createEngineOilMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Best Engine Oil for Perodua Myvi Malaysia (2026 Guide)",
+export const metadata = createEngineOilMetadata({
+  car: "Perodua Myvi",
+  slug: "best-engine-oil-perodua-myvi",
   description:
-    "Looking for the best engine oil for Perodua Myvi? Learn the recommended viscosity and why SUMO Engine Oil is a trusted choice in Malaysia.",
-};
+    "Looking for the best engine oil for Perodua Myvi in Malaysia? Learn the recommended viscosity and discover a suitable SUMO engine oil.",
+});
 
 export default function MyviGuide() {
   return (

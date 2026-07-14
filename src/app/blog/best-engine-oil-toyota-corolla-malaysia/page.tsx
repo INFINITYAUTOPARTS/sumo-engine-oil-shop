@@ -1,4 +1,12 @@
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
+
+export const metadata = createEngineOilMetadata({
+  car: "Toyota Corolla",
+  slug: "best-engine-oil-toyota-corolla-malaysia",
+  description:
+    "Learn the recommended engine oil viscosity for Toyota Corolla in Malaysia and discover the suitable SUMO engine oil.",
+});
 
 export default function Page() {
   return (

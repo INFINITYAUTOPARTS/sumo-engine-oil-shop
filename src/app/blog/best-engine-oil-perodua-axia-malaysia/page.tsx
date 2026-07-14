@@ -1,4 +1,12 @@
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
+
+export const metadata = createEngineOilMetadata({
+  car: "Perodua Axia",
+  slug: "best-engine-oil-perodua-axia-malaysia",
+  description:
+    "Learn the recommended engine oil viscosity for Perodua Axia in Malaysia and discover the suitable SUMO engine oil.",
+});
 
 export default function Page() {
   return (

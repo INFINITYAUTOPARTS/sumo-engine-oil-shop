@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import EngineOilGuideTemplate from "@/components/EngineOilGuideTemplate";
+import { createEngineOilMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Best Engine Oil for Toyota Hilux Malaysia (2026 Guide)",
+export const metadata = createEngineOilMetadata({
+  car: "Toyota Hilux",
+  slug: "best-engine-oil-toyota-hilux-malaysia",
   description:
     "Learn the suitable engine oil viscosity for Toyota Hilux diesel models in Malaysia and view the recommended SUMO 4X4 diesel engine oil.",
-};
+});
 
 export default function Page() {
   return (

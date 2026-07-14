@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { createEngineOilMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Best Engine Oil for Toyota Vios Malaysia (2026 Guide)",
+export const metadata = createEngineOilMetadata({
+  car: "Toyota Vios",
+  slug: "best-engine-oil-toyota-vios-malaysia",
   description:
-    "Looking for the best engine oil for Toyota Vios in Malaysia? Learn which viscosity is suitable and why SUMO Engine Oil is trusted by Malaysian drivers.",
-};
+    "Looking for the best engine oil for Toyota Vios in Malaysia? Learn which viscosity is suitable and discover a suitable SUMO engine oil.",
+});
 
 export default function ToyotaViosGuide() {
   return (
+    
     <main className="container-pad py-16">
 
       <h1 className="text-5xl font-black">

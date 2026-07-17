@@ -7,10 +7,24 @@ type MarketplaceButtonsProps = {
   includeWhatsApp?: boolean;
 };
 
-export function MarketplaceButtons({ compact = false, vertical = false, includeWhatsApp = true }: MarketplaceButtonsProps) {
+export function MarketplaceButtons({
+  compact = false,
+  vertical = false,
+  includeWhatsApp = true,
+}: MarketplaceButtonsProps) {
   const baseClass =
     "focus-ring inline-flex h-10 items-center justify-center gap-2 rounded-sm px-3 text-xs font-black transition";
   const layoutClass = vertical ? "grid gap-2" : "flex flex-wrap gap-2";
+
+  const handleWhatsAppClick = () => {
+    const fbq = (
+      window as typeof window & {
+        fbq?: (...args: unknown[]) => void;
+      }
+    ).fbq;
+
+    fbq?.("track", "Contact");
+  };
 
   return (
     <div className={layoutClass}>
@@ -19,13 +33,19 @@ export function MarketplaceButtons({ compact = false, vertical = false, includeW
           href={marketplaceLinks.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${baseClass} bg-green-600 text-white hover:bg-green-700 ${compact ? "min-w-10" : ""}`}
+          onClick={handleWhatsAppClick}
+          className={`${baseClass} bg-green-600 text-white hover:bg-green-700 ${
+            compact ? "min-w-10" : ""
+          }`}
         >
           <MessageCircle className="h-4 w-4" />
-          {!compact ? "Order via WhatsApp" : <span className="sr-only">Order via WhatsApp</span>}
+          {!compact ? (
+            "Order via WhatsApp"
+          ) : (
+            <span className="sr-only">Order via WhatsApp</span>
+          )}
         </a>
       ) : null}
-      
     </div>
   );
 }

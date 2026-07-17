@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { CartProvider } from "@/components/CartProvider";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
@@ -85,6 +86,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </CartProvider>
       </body>
+      <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-N9LG8WEXSN"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N9LG8WEXSN');
+  `}
+</Script>
     </html>
   );
 }

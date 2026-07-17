@@ -1,3 +1,5 @@
+"use client";
+
 import { MessageCircle } from "lucide-react";
 import { marketplaceLinks } from "@/lib/marketplace";
 
